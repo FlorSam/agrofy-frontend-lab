@@ -1,0 +1,49 @@
+body 
+{
+ margin:0;
+ padding:0;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    background-color: rgb(138, 7, 33);
+    display: inline-flexbox;
+}
+
+nav{
+    text-align: right;
+}
+
+.hero{
+    background-image: url("../images/pokebola.jpg");
+    background-size: cover;
+    margin:0;
+    padding:0; 
+}
+
+.view{
+    
+    border: 1px solid black;
+ background: none;
+ padding: 10px 20px;
+ font-size: 20px;
+ font-family: "montserrat";
+ cursor: pointer;
+ margin: 10px;
+ transition: 0.8s;
+ position: relative;
+ color: black;
+}
+
+
+h1{
+    font-family: monospace;
+}
+
+h2{
+    margin: 0%;
+}
+
+@media (max-width: 768px){
+
+}
