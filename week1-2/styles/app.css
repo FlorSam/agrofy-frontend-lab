@@ -10,10 +10,6 @@ header{
     display: inline-flexbox;
 }
 
-nav{
-    text-align: right;
-}
-
 .hero{
     background-image: url("../images/pokebola.jpg");
     background-size: cover;
