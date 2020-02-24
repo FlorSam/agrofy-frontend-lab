@@ -5,8 +5,11 @@
  box-sizing: border-box;
 }
 
-#historypokemon, #videos, #contactus{
+#historypokemon, #contactus{
   background-color: #f5d3b37d;
+}
+#videos{
+  background-color: #ff880052;
 }
 #Capa_1{
   width: 25%;
@@ -22,18 +25,16 @@
 
  .links{
   display: flexbox;
- text-decoration: none;
+  text-decoration: none;
   float: right;
   line-height: 100px;
-
-
 } 
 
 .headerdesktop li a{
   color: #482011;
   margin: inherit;
- text-decoration: none;
- padding: 35;
+  text-decoration: none;
+  padding: 35;
   display: flex;
   font-size: x-large;
 }
@@ -67,29 +68,6 @@ header {
    justify-content: flex-end;
   }
   
-  /* .menu-list {
-    margin: 0;
-    list-style: none;
-    padding: 10px;
-    color: #6B7C93;
-      font-family: Helvetica;
-      font-size: 16px;
-      display: none;
-  }
-  
-  .menu-list__item {
-    margin-left: 10px;
-    padding: 5px;
-  }
-  
-  .trigger-input {
-    display: none
-  }
-  
-  .trigger-input:checked + .trigger-wrapper .menu-list {
-      display: block;
-  }
-*/
 .view{
     
  border: 5px solid #ff8800;
@@ -115,7 +93,7 @@ header {
 }
 
 #hero h2{
-  color:#ff8800;
+    color:#ff8800;
     padding: 150;
     font-size: -webkit-xxx-large;
     text-align: initial;
@@ -125,29 +103,23 @@ header {
   margin: 0 10%;
 }
 
-
-/* #historypokemon h2{
-
-  text-align: center;
-  font-size: 50%;
- 
-  color:#ff8800;
-} */
-
 .his{
     display: flex;
-  flex-direction: row;
+    flex-direction: row;
   
     
 }
+
 .icon{
   display: flex;
   align-items: center;
 }
+
 #historypokemon{
-  display: flex;
-  flex-direction: column;
+        display: flex;
+        flex-direction: column;
 }
+
 .his .icon h3{
   font-size: -webkit-xxx-large;
 }
@@ -278,7 +250,7 @@ p{
   }
   
   .headermobile .menu > div {
-    background: var(--overlay-color);
+    background: wheat;
     border-radius: 50%;
     width: 200vw;
     height: 200vw;
@@ -300,7 +272,7 @@ p{
   
   .headermobile .menu > div > div > ul > li {
     list-style: none;
-    color: #fff;
+    color: #ff0937db;
     font-size: 1.5rem;
     padding: 1rem;
   }
@@ -319,16 +291,20 @@ p{
  color: #ff8800;
 
 }
+
 #videos a{
   margin: auto;
 }
+
 #vid{
   margin: 10%;
 }
+
 .videoandbutton{
   display: flex;
   align-items: center;
 }
+
 #contactus input{
     text-align: center;
     background: none;
@@ -339,18 +315,22 @@ p{
     border-radius: 24px;
 
 }
+
 form{
   text-align-last: center;
 }
+
 h2{
   font-size: -webkit-xxx-large;
 color: #ff8800;
 text-align: center;
 
 }
+
 #contactus form input{
   font-size: xx-large;
 }
+
 input#send{
   border: 5px solid #ff8800;
  background: none;
@@ -358,6 +338,7 @@ input#send{
  font-family: 'Poppins';
  color: #ff8800;
 }
+
 footer{
     background-color: #ff8800;
     text-align: center;
@@ -373,7 +354,41 @@ footer{
 
     .headermobile{
         display: block;
+        
     }
+    .his{
+      display: contents;
+      text-align: center;
+    }
+
+    .icon{
+      justify-content: center;
+    }
+
+    #Layer_1, #Layer_2, #Layer_3{
+      width: 15%;
+    }
+
+    #hero{
+      background-image: url("../images/pokemon.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #hero h2{
+      text-align: center;
+    }
+
+    #hero .view{
+      align-items: center;
+    }
+    
+    .logopage{
+      font-size: xx-large;
+      direction: rtl;
+      display: contents;
+    }
+    
 }
 
 
