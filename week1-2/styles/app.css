@@ -1,53 +1,73 @@
 *{
  margin:0;
  padding:0;
- font-family: serif;
+ font-family: 'Poppins';
  box-sizing: border-box;
 }
 
+#historypokemon, #videos, #contactus{
+  background-color: #f5d3b37d;
+}
 #Capa_1{
-  width: 7%;
+  width: 25%;
 }
 
-.headerdesktop h1{
-  color: red;
-  font-size: 7%;
-
-}
-
-.links{
+.logopage{
   display: flex;
-  
-  
+  width: 50%;
+  font-size: -webkit-xxx-large;
+  margin-inline-end: auto;
 
 }
 
-.links a{
-  color: aqua;
-  
+ .links{
+  display: flexbox;
+ text-decoration: none;
+  float: right;
+  line-height: 100px;
+
+
+} 
+
+.headerdesktop li a{
+  color: #482011;
+  margin: inherit;
+ text-decoration: none;
+ padding: 35;
+  display: flex;
+  font-size: x-large;
 }
 
 .headerdesktop{
-    display: block;
-    display: flex;
-    justify-content: space-around;
-    /* align-items: center;
-    width: fit; */ 
+    
+    display: flex; 
+    height: 100px;
+   
+   justify-content: space-around;
+    text-decoration: none;
+    
+    list-style: none;
+    margin: 5px;
 
 }
+
+.desk{
+  justify-content: space-around;
+} 
 
 .headermobile{
     display: none;
 }
 
 
-.header {
-    margin: 10px;
+header {
+    
     display: flex;
-    flex-direction: column;
+   background-color: #ff8800;
+   justify-content: flex-end;
   }
   
-  .menu-list {
+  /* .menu-list {
     margin: 0;
     list-style: none;
     padding: 10px;
@@ -58,7 +78,7 @@
   }
   
   .menu-list__item {
-    margin-left 10px;
+    margin-left: 10px;
     padding: 5px;
   }
   
@@ -69,71 +89,84 @@
   .trigger-input:checked + .trigger-wrapper .menu-list {
       display: block;
   }
-   
+*/
+.view{
+    
+ border: 5px solid #ff8800;
+ background: none;
+ padding: 10px 20px;
+ font-size: 30px;
+ font-family: 'Poppins';
+ cursor: pointer;
+ margin: 230;
+ transition: 0.8s;
+ position: relative;
+ color: #ff8800;
+}
+
 
 #hero{
     background-image: url("../images/home.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     margin:0;
     padding:0; 
 }
 
-.view{
-    
- border: 1px solid black;
- background: none;
- padding: 10px 20px;
- font-size: 20px;
- font-family: "montserrat";
- cursor: pointer;
- margin: 10px;
- transition: 0.8s;
- position: relative;
- color: black;
+#hero h2{
+  color:#ff8800;
+    padding: 150;
+    font-size: -webkit-xxx-large;
+    text-align: initial;
+}
+
+#hero a{
+  margin: 0 10%;
 }
 
 
-h1{
-    font-family: monospace;
-}
+/* #historypokemon h2{
 
-h2{
-    margin: 0%;
-}
-
-#historypokemon{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-}
+  text-align: center;
+  font-size: 50%;
+ 
+  color:#ff8800;
+} */
 
 .his{
     display: flex;
-    flex-direction: row;
+  flex-direction: row;
+  
     
 }
-
-.his>div{
-    width: 20%;
-    padding: 0%;
+.icon{
+  display: flex;
+  align-items: center;
+}
+#historypokemon{
+  display: flex;
+  flex-direction: column;
+}
+.his .icon h3{
+  font-size: -webkit-xxx-large;
 }
 
-.his>div:first-child{
-    width: 70%;
+.his>div:last-child{
+   flex: 2;
 } 
 
-#Layer_1{
-  width: 3%;
+#Layer_1, #Layer_2, #Layer_3{
+  width: 20%;
+}
+h4{
+  color: #ff0937db;
+  text-transform: uppercase;
+  font-size: larger;
 }
 
-#Layer_2{
-  width: 3%;
-}
-#Layer_3{
-  width: 3%;
+p{
+  font-size: larger;
 }
 
 /* MENU STYLES */
@@ -278,17 +311,57 @@ h2{
     transition: color 0.4s ease;
   }
   
+#videos button{
+  border: 5px solid #ff8800;
+ background: none;
+ font-size: 30px;
+ font-family: 'Poppins';
+ color: #ff8800;
 
-#contactus{
-    text-align: center;
 }
-
-
-footer{
-    background-color: rgb(180, 77, 29);
+#videos a{
+  margin: auto;
+}
+#vid{
+  margin: 10%;
+}
+.videoandbutton{
+  display: flex;
+  align-items: center;
+}
+#contactus input{
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: none;
+    justify-content: center;
+    border: 3px solid;
     
+    color: #f5d3b37d;
+    border-radius: 24px;
+
+}
+form{
+  text-align-last: center;
+}
+h2{
+  font-size: -webkit-xxx-large;
+color: #ff8800;
+text-align: center;
+
+}
+#contactus form input{
+  font-size: xx-large;
+}
+input#send{
+  border: 5px solid #ff8800;
+ background: none;
+ font-size: 30px;
+ font-family: 'Poppins';
+ color: #ff8800;
+}
+footer{
+    background-color: #ff8800;
+    text-align: center;
+    font-family: 'Poppins';
     height: 10%;
     
 }
