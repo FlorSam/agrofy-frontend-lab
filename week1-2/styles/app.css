@@ -1,36 +1,43 @@
-*{
- margin:0;
- padding:0;
- font-family: 'Poppins';
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
 }
 
-#historypokemon, #contactus{
+#historypokemon,
+#contactus {
   background-color: #f5d3b37d;
 }
-#videos{
+#videos {
   background-color: #ff880052;
 }
-#Capa_1{
+#Capa_1 {
   width: 25%;
 }
 
-.logopage{
+.logopage {
   display: flex;
   width: 50%;
   font-size: -webkit-xxx-large;
   margin-inline-end: auto;
-
 }
 
- .links{
+.links {
   display: flexbox;
   text-decoration: none;
   float: right;
   line-height: 100px;
-} 
+}
 
-.headerdesktop li a{
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: red;
+}
+
+.headerdesktop li a {
   color: #482011;
   margin: inherit;
   text-decoration: none;
@@ -39,356 +46,357 @@
   font-size: x-large;
 }
 
-.headerdesktop{
-    
-    display: flex; 
-    height: 100px;
-   
-   justify-content: space-around;
-    text-decoration: none;
-    
-    list-style: none;
-    margin: 5px;
-
-}
-
-.desk{
+.headerdesktop {
+  display: flex;
+  height: 25%;
   justify-content: space-around;
-} 
-
-.headermobile{
-    display: none;
+  text-decoration: none;
+  list-style: none;
+  margin: 5px;
 }
 
+.desk {
+  justify-content: space-around;
+}
+
+.headermobile {
+  display: none;
+}
 
 header {
-    
-    display: flex;
-   background-color: #ff8800;
-   justify-content: flex-end;
-  }
-  
-.view{
-    
- border: 5px solid #ff8800;
- background: none;
- padding: 10px 20px;
- font-size: 30px;
- font-family: 'Poppins';
- cursor: pointer;
- margin: 230;
- transition: 0.8s;
- position: relative;
- color: #ff8800;
+  display: flex;
+  background-color: #ff8800;
+  justify-content: flex-end;
 }
 
-
-#hero{
-    background-image: url("../images/home.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin:0;
-    padding:0; 
+.view {
+  border: 5px solid #ff8800;
+  background: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: "Poppins";
+  cursor: pointer;
+  margin: 230;
+  transition: 0.8s;
+  position: relative;
+  color: #ff8800;
 }
 
-#hero h2{
-    color:#ff8800;
-    padding: 150;
-    font-size: -webkit-xxx-large;
-    text-align: initial;
+#hero {
+  background-image: url("../images/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#hero a{
+#hero h2 {
+  color: #ff8800;
+  padding: 150;
+  font-size: -webkit-xxx-large;
+  text-align: initial;
+}
+
+#hero a {
   margin: 0 10%;
 }
 
-.his{
-    display: flex;
-    flex-direction: row;
-  
-    
+.his {
+  display: flex;
+  flex-direction: row;
 }
 
-.icon{
+.icon {
   display: flex;
   align-items: center;
 }
 
-#historypokemon{
-        display: flex;
-        flex-direction: column;
+#historypokemon {
+  display: flex;
+  flex-direction: column;
 }
 
-.his .icon h3{
+.his .icon h3 {
   font-size: -webkit-xxx-large;
 }
 
-.his>div:last-child{
-   flex: 2;
-} 
+.his > div:last-child {
+  flex: 2;
+}
 
-#Layer_1, #Layer_2, #Layer_3{
+#Layer_1,
+#Layer_2,
+#Layer_3 {
   width: 20%;
 }
-h4{
+h4 {
   color: #ff0937db;
   text-transform: uppercase;
   font-size: larger;
 }
 
-p{
+p {
   font-size: larger;
 }
 
 /* MENU STYLES */
 .headermobile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  .headermobile .toggler {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
-  }
-  
-  .headermobile .hamburger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    padding: 1rem;
-    background: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Hamburger Line */
-  .headermobile .hamburger > div {
-    position: relative;
-    flex: none;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-  }
-  
-  /* Hamburger Lines - Top & Bottom */
-  .headermobile .hamburger > div::before,
-  .headermobile .hamburger > div::after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: -10px;
-    width: 100%;
-    height: 2px;
-    background: inherit;
-  }
-  
-  /* Moves Line Down */
-  .headermobile .hamburger > div::after {
-    top: 10px;
-  }
-  
-  /* Toggler Animation */
-  .headermobile .toggler:checked + .hamburger > div {
-    transform: rotate(135deg);
-  }
-  
-  /* Turns Lines Into X */
-  .headermobile .toggler:checked + .hamburger > div:before,
-  .headermobile .toggler:checked + .hamburger > div:after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  
-  /* Rotate On Hover When Checked */
-  .headermobile .toggler:checked:hover + .hamburger > div {
-    transform: rotate(225deg);
-  }
-  
-  /* Show Menu */
-  .headermobile .toggler:checked ~ .menu {
-    visibility: visible;
-  }
-  
-  .headermobile .toggler:checked ~ .menu > div {
-    transform: scale(1);
-    transition-duration: var(--menu-speed);
-  }
-  
-  .headermobile .toggler:checked ~ .menu > div > div {
-    opacity: 1;
-    transition:  opacity 0.4s ease 0.4s;
-  }
-  
-  .headermobile .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .headermobile .menu > div {
-    background: wheat;
-    border-radius: 50%;
-    width: 200vw;
-    height: 200vw;
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    transition: all 0.4s ease;
-  }
-  
-  .headermobile .menu > div > div {
-    text-align: center;
-    max-width: 90vw;
-    max-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  
-  .headermobile .menu > div > div > ul > li {
-    list-style: none;
-    color: #ff0937db;
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
-  
-  .headermobile .menu > div > div > ul > li > a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.4s ease;
-  }
-  
-#videos button{
-  border: 5px solid #ff8800;
- background: none;
- font-size: 30px;
- font-family: 'Poppins';
- color: #ff8800;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-#videos a{
+.headermobile .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.headermobile .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.headermobile .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.headermobile .hamburger > div::before,
+.headermobile .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.headermobile .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.headermobile .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.headermobile .toggler:checked + .hamburger > div:before,
+.headermobile .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.headermobile .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.headermobile .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.headermobile .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.headermobile .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.headermobile .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headermobile .menu > div {
+  background: wheat;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.headermobile .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.headermobile .menu > div > div > ul > li {
+  list-style: none;
+  color: #ff0937db;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.headermobile .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+#videos button {
+  border: 5px solid #ff8800;
+  background: none;
+  font-size: 30px;
+  font-family: "Poppins";
+  color: #ff8800;
+}
+
+#videos a {
   margin: auto;
 }
 
-#vid{
+#vid {
   margin: 10%;
 }
 
-.videoandbutton{
+.videoandbutton {
   display: flex;
   align-items: center;
 }
 
-#contactus input{
-    text-align: center;
-    background: none;
-    justify-content: center;
-    border: 3px solid;
-    
-    color: #f5d3b37d;
-    border-radius: 24px;
-
+#contactus input {
+  text-align: center;
+  background: none;
+  justify-content: center;
+  border: 3px solid;
+  color: #f5d3b37d;
+  border-radius: 24px;
 }
 
-form{
+form {
   text-align-last: center;
 }
 
-h2{
+h2 {
   font-size: -webkit-xxx-large;
-color: #ff8800;
-text-align: center;
-
+  color: #ff8800;
+  text-align: center;
 }
 
-#contactus form input{
+#contactus form input {
   font-size: xx-large;
 }
 
-input#send{
+input#send {
   border: 5px solid #ff8800;
- background: none;
- font-size: 30px;
- font-family: 'Poppins';
- color: #ff8800;
+  background: none;
+  font-size: 30px;
+  font-family: "Poppins";
+  color: #ff8800;
 }
 
-footer{
-    background-color: #ff8800;
+footer {
+  background-color: #ff8800;
+  text-align: center;
+  font-family: "Poppins";
+  height: 10%;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: lemonchiffon;
+}
+@media only screen and (max-width: 768px) {
+  .headerdesktop {
+    display: none;
+  }
+
+  .headermobile {
+    display: block;
+  }
+  .his {
+    display: contents;
     text-align: center;
-    font-family: 'Poppins';
-    height: 10%;
-    
+  }
+
+  .icon {
+    justify-content: center;
+  }
+
+  #Layer_1,
+  #Layer_2,
+  #Layer_3 {
+    width: 15%;
+  }
+
+  #hero {
+    background-image: url("../images/pokemon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #hero h2 {
+    text-align: center;
+  }
+
+  #hero .view {
+    align-items: center;
+  }
+
+  .logopage {
+    font-size: xx-large;
+    direction: rtl;
+    display: contents;
+  }
 }
 
-@media only screen and (max-width: 768px){
-    .headerdesktop{
-        display: none;
-    }
-
-    .headermobile{
-        display: block;
-        
-    }
-    .his{
-      display: contents;
-      text-align: center;
-    }
-
-    .icon{
-      justify-content: center;
-    }
-
-    #Layer_1, #Layer_2, #Layer_3{
-      width: 15%;
-    }
-
-    #hero{
-      background-image: url("../images/pokemon.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    #hero h2{
-      text-align: center;
-    }
-
-    #hero .view{
-      align-items: center;
-    }
-    
-    .logopage{
-      font-size: xx-large;
-      direction: rtl;
-      display: contents;
-    }
-    
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
 }
 
-
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}
