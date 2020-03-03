@@ -1,7 +1,6 @@
-window.addEventListener("load", () => {
-  window.onscroll = function() {
-    myFunction();
-  };
+window.onscroll = function() {
+  myFunction();
+};
 
   let header = document.getElementById("myHeader");
 
@@ -17,22 +16,24 @@ window.addEventListener("load", () => {
   }
 
   //pokedex
-  const pokedex = document.getElementById("pokedexpage");
+  //const pokedex = document.getElementById("pokedexpage");
 
-  fetch("https://pokeapi.co/api/v2/pokemon/")
-    .then(response => {
-      return response.json();
-    })
-    .then(function(json) {
-      let pokemonUrl = URL.createObjectURL(json);
-      inicialize(pokemonId);
-    })
-    .then(json => {
-      console.log(json);
-    })
-    .catch(error => console.error(error));
-
-  createObjectURL();
+  let pokemonUrl = () => {
+    
+    let promises = [];
+    
+    for (let i = 0; i < 151; i++) {
+    const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+      promises.push(fetch(url).then(resp => resp.json()));
+    }
+    Promise.all(promises)
+      .then(list => {
+        let listPokemon = list;
+        console.log(listPokemon);
+      });
+    }
+  
+  
 
   // function showPokemon(jsonObj) {
   //   let pokemonId = jsonObj['id'];
@@ -48,4 +49,36 @@ window.addEventListener("load", () => {
 
   //   }
   // }
-});
+  pokemonUrl();
+
+  let pokemonInfo = pokemonData => {
+    Promise.all(pokemonData).then(results => {
+      let pokemonId = results.map(result => ({
+        name: result.name,
+        image: result.image,
+        type: result.types.map(type => type.type.name).join(", "),
+        id: result.id
+      }));
+      console.log(pokemonData);
+    });
+    
+  };
+
+  const pokemonData = [];
+    const result = words.filter(word =>
+    word.length > 6
+    );
+    console.log(result);
+    //
+  filtroPokemon = () => {
+    if ('id' in obj && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+      return true;
+    } else {
+      entradasInvalidas++;
+      return false;
+    }
+  }
+  var arrPorID = arr.filter(filtrarPorID);
+
+console.log('', arrPorID)
+  };
