@@ -1,16 +1,15 @@
-window.onscroll = function () {
-  myFunction();
-};
+window.onscroll = function (){
 
-let header = document.getElementById("myHeader");
+scrollFunction = () => {
+  let header = document.getElementById("myHeader");
 
-let sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+  let scroll = header.offsetTop;
+  if (window.pageYOffset > scroll) {
+    header.className.add("scroll");
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove("scroll");
   }
-  console.log("myFunction");
-}
+  console.log("scrollFunction");
+};
+scrollFunction();
+};

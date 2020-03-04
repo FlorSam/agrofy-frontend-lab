@@ -30,11 +30,15 @@
   line-height: 100px;
 }
 
-.fixed-header {
+#myHeader {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: red;
+}
+
+.scroll{
+  transition: all 2s;
+  background-color: white 2s;
 }
 
 .headerdesktop li a {
