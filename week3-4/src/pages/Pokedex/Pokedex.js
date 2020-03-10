@@ -12,14 +12,18 @@ const Pokedex = () => (
 )
 
 const [PokemonCards, setPokemonCards] = useState([]);
+const [Search, setSearch] = useState ("");
 
 useEffect = (() => {
   api();
-}, [search]);
+}, [Search]);
 
 
 const api = async () => {
+  let pokemon = [];
   let promises = [];
+  const poke = [];
+
   for (let i = 1; i < 151; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then(resp => resp.json()));
@@ -27,18 +31,21 @@ const api = async () => {
   Promise.all(promises).then(list => {
     pokemon = list;
     console.log(list);
-    setPokemonCards(data);
-    const { id, name, image, type } = poke;
-    console.log(data);
+    setPokemonCards(list);
   
-      poke.map(poke => (
+    const { id, name, image, type } = poke;
+    console.log(poke);
+  
+      poke.map(pokemon.map(poke => {
+         { id, name, image, type };
         <PokemonCard
           name={poke.name}
-          img={poke.image}
-          type={poke.type}
+          img={poke.sprites.front_default}
+          type={poke.types.map(type => type.type.name).join(", ")}
         />
-      ))
-    }
-  }
+    
+      }))
+  })
+}
 
 export default Pokedex;
