@@ -36,7 +36,7 @@ showPokemon = () => {
     <div class="container">
       <h4><b>${poke.name}</b></h4>
       <p>${poke.types.map(type => type.type.name).join(", ")}</p>
-    </div>`;
+    </div>`; 
 
     const pokeButton = document.createElement("button");
     pokeButton.innerHTML = "fav";
