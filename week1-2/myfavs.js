@@ -7,26 +7,26 @@ showFav = () => {
   
   
   const pfavoritos = favorite.map(pokemonId => {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
-});
-Promise.all(pfavoritos).then(list => {
-  listapok = list;
-    console.log(listapok);
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(resp => resp.json());
+  });
+  Promise.all(pfavoritos).then(list => {
+    listapok = list;
+      console.log(listapok);
 
-  const dataHtml = listapok.map(pokemon => {
+    const dataHtml = listapok.map(pokemon => {
 
-    return `<div class="${pokemonId.id}">
-    <img src= ${
-      pokemonId.sprites["front_default"]
-    } style="width:30%">
-    <div class="container">
-      <h4><b>${pokemonId.name}</b></h4>
-      <p>${pokemonId.types.map(type => type.type.name).join(", ")}</p>
-    </div>`;
-}).reduce((fullString, currentDiv) => fullString + currentDiv, '')
+      return `<div class="${pokemon.id}">
+      <img src= ${
+        pokemon.sprites["front_default"]
+      } style="width:30%">
+      <div class="container">
+        <h4><b>${pokemon.name}</b></h4>
+        <p>${pokemon.types.map(type => type.type.name).join(", ")}</p>
+      </div>`;
+    }).reduce((fullString, currentDiv) => fullString + currentDiv, '')
 
-sectionFav.innerHTML = dataHtml;
-});
+    sectionFav.innerHTML = dataHtml;
+  });
 
 };
 
