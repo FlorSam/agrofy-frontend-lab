@@ -29,6 +29,35 @@ const Pokedex = () => {
        api();
     }, []);
 
+    const filter = text => {
+      updatedList = this.state.initialItems;    
+      updatedList = updatedList.filter(function(item){
+       return item.toLowerCase().search(
+         event.target.value.toLowerCase()) !== -1;
+       });
+       this.setState({items: updatedList})
+    }
+    getInitialState = () => {
+      return{
+        initialItems: this.props.items,
+        items: this.props.items
+      }
+    }
+   
+
+    show = () => {
+      return (
+        <ul>
+           {
+            this.props.items.map(function(item) {
+             return <li key={item}>{item}</li>
+           })
+           }
+        </ul>
+       )
+    }
+
+
 return <div className="pokedex page">
 
   <h1>Pokedex</h1>
