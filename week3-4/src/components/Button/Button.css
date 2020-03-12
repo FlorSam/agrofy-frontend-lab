@@ -1,0 +1,12 @@
+button{
+    height: 4em;
+    padding: 1.5em auto;
+    margin: 1em auto;
+    background-color: rgb(49, 2, 49);
+    border: none;
+    border-radius: 20%;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    color: ivory;
+}

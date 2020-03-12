@@ -8,14 +8,14 @@ const Header = () => {
     const getMenuItems = () => <ul>
         <Link to="/"><li>Home</li></Link>
         <Link to="/Pokedex"><li>Pokedex</li></Link>
-        <Link to="/MyFavs.js"><li>My Favs</li></Link>
+        <Link to="/MyFavs"><li>My Favs</li></Link>
     </ul>;
 
     return <header className="header">
         <div className="header__logo">
           <Link to="/">
               <img className="header__logo__image" src="/pokeball.png" alt="logo" />
-              <h2>Pokedex</h2>    
+              <h1>Pokedex</h1>    
           </Link>
         </div>
         <div className="header__menu__desktop">

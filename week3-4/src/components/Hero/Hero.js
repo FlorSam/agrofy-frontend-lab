@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const Hero = () => {
 return (
-    <section id="hero">
+    <section className="hero">
 
 		<h2>Welcome to Pokedex</h2>
 

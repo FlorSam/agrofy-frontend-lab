@@ -1,0 +1,15 @@
+.contact {
+  display: flex;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: xx-large;
+  
+}
+
+input {
+  font-size: xx-large;
+  text-align: center;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}

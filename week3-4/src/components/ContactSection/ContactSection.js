@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./ContactSection";
+import "./ContactSection.css";
 import Form from "../Form/Form";
 
 const ContactSection = () => {

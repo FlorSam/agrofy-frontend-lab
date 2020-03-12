@@ -31,3 +31,21 @@ showFav = () => {
 };
 
 showFav();
+
+
+const filter = text => {
+  updatedList = this.state.initialItems;    
+  updatedList = updatedList.filter(function(item){
+   return item.toLowerCase().search(
+     event.target.value.toLowerCase()) !== -1;
+   });
+   this.setState({items: updatedList})
+}
+getInitialState = () => {
+  return{
+    initialItems: this.props.items,
+    items: this.props.items
+  }
+}
+
+

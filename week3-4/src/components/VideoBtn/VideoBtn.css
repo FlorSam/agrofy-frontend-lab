@@ -1,0 +1,7 @@
+.VideoBtn{
+    display: flex;
+}
+.video{
+    margin-left: inherit;
+    margin: auto;
+}
