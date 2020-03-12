@@ -4,15 +4,17 @@ import PokemonCard from '../../components/PokemonCard/PokemonCard';
 
 const MyFavs = () => {
 
+    const favoriteListKey = "";
     const [fav, setFav] = useState([]);
-
+    const myfavspok = window.localStorage.getItem(favoriteListKey);
+    let favorite = JSON.parse(myfavspok) || [];
     const apiFav = () => {
-        for (let i = 1; i < 151; i++) {
-            const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-            apiFav.push(fetch(url).then(resp => resp.json()));
-        }
-        Promise.all(apiFav).then(list => {
-            const listafavs =list;
+
+        const pfavoritos = favorite.map(pokemonId => {
+            return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(resp => resp.json());
+        });
+        Promise.all(pfavoritos).then(list => {
+            const listafavs = list;
             const favspokemon = listafavs.map(favspokemon => {
                 return {
                     id: favspokemon.id,
@@ -24,13 +26,13 @@ const MyFavs = () => {
             })
             setFav(favspokemon);
         });
-       
+
     };
     useEffect(
         () => {
             apiFav();
         }, []);
-    return( <div className="myfavspage">
+    return (<div className="myfavspage">
 
         <h1>My Favs</h1>
 
@@ -39,7 +41,7 @@ const MyFavs = () => {
         }
 
     </div>
-);
+    );
 }
 
 export default MyFavs;

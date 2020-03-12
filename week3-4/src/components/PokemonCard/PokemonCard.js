@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom';
 import './PokemonCard.css';
 import ButtonFav from '../ButtonFav/ButtonFav';
 
+
 const PokemonCard = ({name, img, type}) => {
-  const clickFavs = () => {
-      
-    const favoriteListKey = "favPokeList";
-    const clickFavs = event.target.parentElement.data;
-    const favoritePokeList = localStorage.getItem(favoriteListKey);
+  let [favoritePokeList, setfavoritePokeList] = useState([]);
+  let clickFavs = () => {
+  const favoriteListKey="";
+    favoritePokeList = localStorage.getItem(favoriteListKey);
     if (favoritePokeList === null) {
       favoritePokeList = JSON.stringify([clickFavs]);
     } else {
       const parsedList = JSON.parse(favoritePokeList);
       favoritePokeList = JSON.stringify([...parsedList, clickFavs]);
     }
-    localStorage.setItem(favoriteListKey, favoritePokeList);
+    localStorage.getItem(favoriteListKey, favoritePokeList);
   };
 
 return (
